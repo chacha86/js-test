@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>variable</title>
+</head>
+<body>
+<script>
+   // var a = 10; // 함수 스코프 =>
+   let b = 20; // 블록 스코프 =>
+   const c = 30; // 블록 스코프, 불변
+
+   function test() {
+       {
+          const a = 10;
+       }
+
+   }
+
+   test();
+
+</script>
+</body>
+</html>

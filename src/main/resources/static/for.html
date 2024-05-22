@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for(let i = 0; i < 10; i++) {
+        console.log(i);
+    }
+
+    const arr = [11,22,33,44,55,66,77,88,99,100];
+
+    for(let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+
+    arr3 = arr.forEach((num) => {
+        return num * 2;
+    });
+
+    arr2 = arr.map((num) => {
+        return num * 2;
+    });
+
+    console.log(arr2);
+    console.log(arr3);
+
+
+
+</script>
+</body>
+</html>
