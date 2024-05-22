@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
+<button id="test-btn">click me</button>
+<a href="https://www.naver.com" id="naver">네이버</a>
+<script>
+    // 마우스 좌클릭, 우클릭, 마우스 커서 올리기, 키보드 버튼 누르기 등등
+    const btn = document.querySelector("#test-btn");
+    console.log(btn);
 
+    btn.addEventListener('click', () => {
+        console.log('click');
+    });
+
+    btn.addEventListener('mouseover', () => {
+        console.log('mouseover');
+    });
+
+    const a = document.querySelector("#naver");
+    a.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('naver click');
+    });
+
+
+</script>
 </body>
 </html>
