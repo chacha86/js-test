@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Java Script Object Notation => JSON
+    const person1 = {
+        name: "홍길동",
+        age: 20,
+        address: "서울",
+        children: [
+            {
+                name: "홍길순",
+                age: 10,
+                address: "서울"
+            },
+            {
+                name: "홍길자",
+                age: 5,
+                address: "서울"
+            }
+        ]
+    };
+    const person2 = {
+        name: "이순신",
+        age: 30,
+        address: "대전"
+    };
+
+    const people = [person1, person2];
+
+    console.log(person1.name);
+    console.log(person1.age);
+    console.log(person1.address)
+
+    console.log(people);
+
+    console.log("--------------홍길동의 자식들 -----------");
+    person1.children.forEach((child) => {
+        console.log(child.name);
+        console.log(child.age);
+    });
+
+    // 직렬화, 역직렬화
+
+    const object = {name : "홍길동", age : 20};
+
+    console.log(object.name);
+
+    const jsonString = "{name : '홍길동', age : 20}";
+
+    console.log(jsonString.name);
+
+    console.log(typeof(object));
+    console.log(typeof(jsonString));
+
+    // 객체가 문자로 취급되어야 하는 상황이 있다.
+    // 객체를 문자화 시키는 것을 직렬화라고 한다.
+    // 문자를 객체화 시키는 것을 역직렬화라고 한다.
+
+    const objectStr = JSON.stringify(object);
+
+    console.log(typeof(objectStr));
+    console.log(objectStr);
+    console.log(objectStr.name);
+
+    const object2 = JSON.parse(objectStr);
+
+    console.log(typeof(object2));
+    console.log(object2);
+    console.log(object2.name);
+
+
+</script>
+</body>
+</html>
