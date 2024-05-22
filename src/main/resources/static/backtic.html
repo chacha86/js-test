@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const name = "홍길동";
+    const age = 70;
+
+    console.log(name + "님의 나이는 " + age + "세 입니다.");
+    console.log(`${name}님의 나이는 ${age}세 입니다.`);
+
+    const body = document.querySelector("body");
+    // const discount = '<div>할인 대상입니다.</div>';
+    // const nonDiscount = '<div>일반 대상입니다.</div>';
+    // if (age > 60) {
+    //     body.innerHTML = discount;
+    // } else {
+    //     body.innerHTML = nonDiscount;
+    // }
+
+    const div = `
+        ${age > 60
+        ? '<div>할인 대상입니다.</div>'
+        : '<div>일반 대상입니다.</div>'
+        }
+    `;
+
+    body.innerHTML = div;
+
+</script>
+</body>
+</html>
