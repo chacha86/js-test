@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 id="title">제목</h1>
+    <h1  class="con">제목2</h1>
+    <div class="con">내용</div>
+</div>
+<script>
+    // 엘리먼트 -> 태그로 감싸여진 특정 정보
+    // 셀렉터 -> 문서에 존재하는 엘리먼트를 선택.
+
+    // 3가지 방법 -> id, class, tag
+    // tag
+    const result = document.getElementsByTagName('h1');
+    console.log(result[0]);
+
+    const result2 = document.getElementById('title'); // id는 고유한 식별자
+    console.log(result2);
+
+    const result3 = document.getElementsByClassName('con'); // class는 여러개의 엘리먼트에 사용 가능
+    console.log(result3);
+
+    // querySelector -> css 선택자를 이용해서 엘리먼트를 선택
+    // id -> #
+    // class -> .
+    // tag -> tag
+
+    const result4 = document.querySelector('h1');
+    console.log(result4);
+
+    const result5 = document.querySelector('#title');
+    console.log(result5);
+
+    const result6 = document.querySelectorAll(".con");
+    console.log(result6);
+
+</script>
+</body>
+</html>
